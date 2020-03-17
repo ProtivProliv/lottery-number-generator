@@ -1,0 +1,121 @@
+﻿<Window x:Class="Loto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Loto"
+        mc:Ignorable="d"
+        Height="150" Width="300" Background="Transparent" AllowsTransparency="True" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" ResizeMode="NoResize" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Background" Value="#7e21d4"/>
+            <Setter Property="Width" Value="162"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Content" Value="Om Shri Mahalaxmi Namah"/>
+            <Setter Property="FontFamily" Value="MV Boli"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="0" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value ="True">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="31" Color="Aquamarine"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="close_btn" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#7e21d4"/>
+            <Setter Property="Template">
+                <Setter.Value>                    
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value ="True">
+                    <Setter Property="Foreground" Value="Aquamarine"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="27"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontFamily" Value="MV Boli"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="TextAlignment" Value="Center"/>            
+        </Style>
+    </Window.Resources>
+    <Border CornerRadius="5" BorderThickness="1" BorderBrush="#7e21d4" Background="#21004b">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>           
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="1" Grid.Column="0" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberOne}"/>
+                </Border>
+                <Border  Grid.Row="1" Grid.Column="2" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberTwo}"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="4" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberThree}"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="6" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberFour}"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="8" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberFive}"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="10" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberSix}"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="12" Background="#7e21d4" CornerRadius="5" BorderThickness="0">
+                    <TextBlock Text="{Binding NumberSeven}"/>
+                </Border>
+            </Grid>
+            <Button Command="{Binding GenerateCommand}" Style="{StaticResource ButtonStyle}" Grid.Row="1" Grid.Column="1"/>
+            <Button Command="{Binding CloseCommand}"  Content="x" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource close_btn}" BorderThickness="0" Margin="20,0,0,55" FontFamily="Candara Light"/>
+        </Grid>
+    </Border>
+</Window>
+

@@ -1,0 +1,14 @@
+C:\Users\zeklb\source\repos\Loto\Loto\bin\Debug\Loto.exe.config
+C:\Users\zeklb\source\repos\Loto\Loto\bin\Debug\Loto.exe
+C:\Users\zeklb\source\repos\Loto\Loto\bin\Debug\Loto.pdb
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Lakshmi.csprojAssemblyReference.cache
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\MainWindow.g.cs
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\App.g.cs
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto_MarkupCompile.cache
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto_MarkupCompile.lref
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\MainWindow.baml
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto.g.resources
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto.Properties.Resources.resources
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Lakshmi.csproj.GenerateResource.cache
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto.exe
+C:\Users\zeklb\source\repos\Loto\Loto\obj\Debug\Loto.pdb
